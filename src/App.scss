@@ -1,0 +1,25 @@
+.App {
+  .p-scrollpanel {
+    p {
+      padding: 0.5rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    &.custom {
+      .p-scrollpanel-wrapper {
+        border-right: 10px solid var(--surface-b);
+      }
+
+      .p-scrollpanel-bar {
+        background-color: var(--primary-color);
+        opacity: 1;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: #007ad9;
+        }
+      }
+    }
+  }
+}
