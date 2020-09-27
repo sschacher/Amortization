@@ -20,7 +20,7 @@ export default function InputGrouping() {
     setLabels([]);
     context.dispatch({ type: "CLEAR_AMORT" });
     let pay = CalculatePayment(principle, interest, amort);
-    setPayment(pay);
+    setPayment(Math.round(pay));
     for (let i = 0; i < amort + 1; i++) {
       labels.push(`Year: ${i}`);
     }
@@ -68,7 +68,7 @@ export default function InputGrouping() {
         <div className="p-col-12 p-md-6 p-lg-3">
           <InputText
             value={interest}
-            placeholder="Interest"
+            placeholder="Interest 5% = 5"
             onChange={(e) => setInterest(e.target.value)}
           />
         </div>
